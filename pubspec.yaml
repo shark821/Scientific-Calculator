@@ -1,0 +1,41 @@
+name: flutter_application_1
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # 現代 Flutter SDK
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # 核心數值計算套件
+  ml_linalg: ^13.0.0      # 高效能矩陣運算 (NumPy 替代品)
+  math_expressions: ^2.4.0  # (未來用於 CalculusPage)
+
+  # 確保與 SDK 兼容
+  vector_math: ^2.2.0 
+
+  # 其他你可能需要的標準套件
+  provider: ^6.1.5
+  english_words: ^4.0.0
+  fl_chart: ^0.68.0  # <--- 新增這行 (版本號可用最新)
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  # 👇 加入這行
+  flutter_launcher_icons: ^0.13.1
+
+# 👇 在檔案最下面加入這段設定
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png" # 這裡就是指向你剛剛放圖片的位置
+  min_sdk_android: 21 # 選擇性，建議加
+  windows:
+    generate: true
+    icon_size: 256
+    image_path: "assets/icon/app_icon.png"
